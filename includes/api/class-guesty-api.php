@@ -17,8 +17,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Guesty_API {
 
-    const TOKEN_ENDPOINT = 'https://open-api.guesty.com/oauth2/token';
-    const API_BASE_URL   = 'https://open-api.guesty.com/v1';
+    // const TOKEN_ENDPOINT = 'https://open-api.guesty.com/oauth2/token';
+    // const API_BASE_URL   = 'https://open-api.guesty.com/v1';
 
     const TOKEN_OPTION          = 'guesty_optimized_api_token';
     const TOKEN_TRANSIENT       = 'guesty_optimized_api_token';

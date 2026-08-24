@@ -1,0 +1,215 @@
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#spinner {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+#exit-intent,
+#fav-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.exit-intent-wrapper,
+.fav-popup-wrapper {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.exit-intent-wrapper p,
+.fav-popup-wrapper p {
+    margin: 0;
+    color: #002A49;
+}
+
+.exit-intent-wrapper p.exit-intent-header,
+.fav-popup-wrapper p.fav-popup-header {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #002a4947;
+}
+
+.exit-intent-wrapper p.exit-intent-text,
+.fav-popup-wrapper p.fav-popup-text {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.exit-intent-cta,
+.fav-popup-cta {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.exit-intent-wrapper .exit-intent-cta button,
+.fav-popup-wrapper .fav-popup-cta a {
+    display: block;
+    border: 1px solid #002a49;
+    background: white;
+    color: #002a49;
+    padding: 10px 15px;
+    line-height: 1;
+    margin-top: 0;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    text-align: center;
+}
+
+.exit-intent-wrapper .exit-intent-cta button:hover,
+.fav-popup-wrapper .fav-popup-cta a:hover {
+    color: #002a49;
+    outline: none;
+}
+
+.exit-intent-wrapper .exit-intent-cta button.primary,
+.fav-popup-wrapper .fav-popup-cta a.primary {
+    border: 1px solid #002a49;
+    background: #002a49;
+    color: white;
+}
+
+.exit-intent-wrapper .exit-intent-cta button.primary:hover,
+.fav-popup-wrapper .fav-popup-cta a.primary:hover {
+    border: 1px solid #D92F74;
+    background: #D92F74;
+}
+
+.exit-intent-wrapper .exit-intent-cta button.secondary,
+.exit-intent-wrapper .exit-intent-cta button.secondary:hover,
+.fav-popup-wrapper .fav-popup-cta a.secondary,
+.fav-popup-wrapper .fav-popup-cta a.secondary:hover {
+    border: 1px solid #D92F74;
+    background: #ffffff;
+    color: #D92F74;
+}
+
+.fav-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.fav-popup-close {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: -10px;
+}
+
+.fav-popup-close::before,
+.fav-popup-close::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 2px;
+  background-color: #333; /* change color as needed */
+  transform-origin: center;
+}
+
+.fav-popup-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.fav-popup-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media only screen and (max-width: 550px) {
+ .exit-intent-wrapper {
+    width: 90%;
+  }
+ .fav-popup-wrapper {
+    width: 90%;
+  }
+}
+/* Checkout policies and explicit consent */
+.guesty-policy-consent {
+    margin: 24px 0;
+    padding: 20px;
+    border: 1px solid #d8dee4;
+    border-radius: 8px;
+    background: #fff;
+}
+.guesty-policy-consent h3,
+.guesty-policy-consent h4 {
+    margin-top: 0;
+}
+.guesty-policy-section p {
+    white-space: pre-line;
+}
+.guesty-consent-field {
+    margin-top: 14px;
+}
+.guesty-consent-field label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.guesty-consent-field input[type="checkbox"] {
+    margin-top: 3px;
+}

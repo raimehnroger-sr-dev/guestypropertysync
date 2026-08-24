@@ -1,0 +1,9 @@
+.guesty-price-estimate::after {
+    content: " estimated";
+    font-size: .78em;
+    font-weight: 400;
+    opacity: .65;
+}
+.guesty-price-estimate {
+    min-height: 1.4em;
+}

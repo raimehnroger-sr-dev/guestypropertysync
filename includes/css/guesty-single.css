@@ -1,0 +1,61 @@
+span.priceFromParam-lineThrough {
+    font-size: 14px;
+    opacity: 0.8;
+    text-decoration: line-through;
+    line-height: 1.6;
+}
+
+.priceFromParam .elementor-heading-title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+/* Feature Ameneties by Group */
+.featured-amenities {
+    column-count: 3;
+}
+
+.featured-amenities .amenity-group {
+    margin-bottom: 30px;
+}
+
+.featured-amenities .amenity-group h5 {
+    color: #002a49;
+}
+
+.featured-amenities .amenity-group ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.featured-amenities .amenity-group ul li {
+    font-family: var(--e-global-typography-text-font-family), Sans-serif;
+    font-size: var(--e-global-typography-text-font-size);
+    font-weight: var(--e-global-typography-text-font-weight);
+    text-transform: var(--e-global-typography-text-text-transform);
+    line-height: var(--e-global-typography-text-line-height);
+    color: var(--e-global-color-secondary);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.featured-amenities .amenity-group ul li::before {
+    content: "";
+    margin-right: 10px;
+    width: 8px;
+    height: 8px;
+    background: var(--e-global-color-secondary);
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .featured-amenities {
+        column-count: 2;
+    }
+}
+
